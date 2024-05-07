@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuessRest", "NumberGuessRest\NumberGuessRest.csproj", "{F6713301-1CBF-465E-B711-6EE5752C692C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuessAppNET", "NumberGuessAppNET\NumberGuessAppNET.csproj", "{4B108823-7722-4404-ACB5-1C3680487905}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6713301-1CBF-465E-B711-6EE5752C692C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6713301-1CBF-465E-B711-6EE5752C692C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6713301-1CBF-465E-B711-6EE5752C692C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6713301-1CBF-465E-B711-6EE5752C692C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B108823-7722-4404-ACB5-1C3680487905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B108823-7722-4404-ACB5-1C3680487905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B108823-7722-4404-ACB5-1C3680487905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B108823-7722-4404-ACB5-1C3680487905}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0F4D503-6B7A-4462-A46B-2EB58C217EC4}
+	EndGlobalSection
+EndGlobal

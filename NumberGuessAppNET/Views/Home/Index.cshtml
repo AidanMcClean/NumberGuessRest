@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Number Guessing Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Number Guessing Game</h2>
+
+        <div>
+            Lower Limit: <input type="number" id="lowerLimit" placeholder="Lower Limit" />
+            Upper Limit: <input type="number" id="upperLimit" placeholder="Upper Limit" />
+            <button id="generate">Generate Number</button>
+        </div>
+
+        <div>
+            Your Guess: <input type="number" id="userGuess" placeholder="Make a Guess" />
+            <button id="guess">Play</button>
+        </div>
+
+        <div id="result"></div>
+        <div>Number of attempts: <span id="attemptCount">0</span></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#generate").click(function() {
+                $.ajax({
+                    url: '@Url.Action("SecretNumber", "Home")',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: { lowerLimit: $("#lowerLimit").val(), upperLimit: $("#upperLimit").val() },
+                    success: function(response) {
+                        $("#attemptCount").text('0');
+                        $("#result").text('');
+                    },
+                    error: function() {
+                        $("#result").text("error");
+                    }
+                });
+            });
+
+            $("#guess").click(function() {
+                var userGuess = $("#userGuess").val();
+                $.ajax({
+                    url: '@Url.Action("CheckNumber", "Home")',
+                    type: 'POST',
+                    data: { userGuess: userGuess },
+                    success: function(response) {
+                        $("#result").text(response.result);
+                        $("#attemptCount").text(response.attemptCount);
+                    },
+                    error: function() {
+                        $("#result").text("error");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
